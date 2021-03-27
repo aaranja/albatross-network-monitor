@@ -1,0 +1,29 @@
+@import "~antd/dist/antd.css";
+#components-layout-demo-fixed-sider .logo {
+	height: 32px;
+	margin: 16px;
+	background: rgba(255, 255, 255, 0.2);
+}
+.site-layout .site-layout-background {
+	background: #fff;
+}
+.logo {
+	width: 150px;
+	float: left;
+}
+.logo a {
+	color: white;
+	font-size: 20px;
+	padding: 19px 20px;
+}
+
+.logo a {
+	margin-left: -20px;
+}
+.menuCon .ant-menu-item,
+.menuCon .ant-menu-submenu-title {
+	padding: 1px 20px;
+}
+.logo a {
+	padding: 0px 20px;
+}
