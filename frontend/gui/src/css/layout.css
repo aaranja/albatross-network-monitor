@@ -7,15 +7,6 @@
 .site-layout .site-layout-background {
 	background: #fff;
 }
-.logo {
-	width: 150px;
-	float: left;
-}
-.logo a {
-	color: white;
-	font-size: 20px;
-	padding: 19px 20px;
-}
 
 .logo a {
 	margin-left: -20px;
@@ -26,4 +17,11 @@
 }
 .logo a {
 	padding: 0px 20px;
+}
+.trigger {
+	padding: 0 24px;
+	font-size: 18px;
+	line-height: 64px;
+	cursor: pointer;
+	transition: color 0.3s;
 }
