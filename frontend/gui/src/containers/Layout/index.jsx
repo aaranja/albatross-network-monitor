@@ -5,7 +5,8 @@ import { connect } from "react-redux";
 class NormalLayout extends React.Component {
 	render() {
 		return (
-			<div className="site-layout-background" style={{ height: "100vh" }}>
+			<div className="site-layout-background" style={{ height: "100vh"}}>
+			
 				{this.props.children}
 			</div>
 		);

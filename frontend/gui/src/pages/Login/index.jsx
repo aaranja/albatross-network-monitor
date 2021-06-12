@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Form, Input, Button, Spin, Card, notification } from "antd";
+import { Form, Input, Button, Spin, Card, notification, Typography  } from "antd";
 import {
 	UserOutlined,
 	LockOutlined,
@@ -13,6 +13,7 @@ import * as action from "../../redux/actions/auth";
 import "../../css/login.css";
 
 const antIcon = <LoadingOutlined style={{ fontSize: 24 }} spin />;
+const { Title } = Typography;
 
 class Login extends Component {
 	/*Send login data to store auth actions*/
@@ -59,21 +60,39 @@ class Login extends Component {
 		const email = "Correo electrónico";
 		const password = "Contraseña";
 		return (
+			<div 
+				className = "main-container"
+				style = {{
+					height:"100vh",
+					background: 'linear-gradient(45deg, #f9f7f7 30%, #dbe2ef 90%)'
+				}}
+			>
 			<div
 				className="contenedor card"
 				style={{
 					display: "flex",
-					justifyContent: "center",
-					alignItems: "center",
+          			justifyContent: "center",
+          			alignItems: "center",
+					padding: "10vh", 
+
 				}}
 			>
 				{this.props.loading ? (
 					<Spin indicator={antIcon} />
 				) : (
 					<Card
-						title="Iniciar sesión"
+						title={<Title level={3}>Iniciar sesión</Title>}
 						bordered={false}
-						style={{ width: 300, alignSelf: "center" }}
+						style={{ 
+							width: 300, 
+							
+							alignSelf: "center", 
+							textAlign: 'center',
+							fontWeight: 'bold',
+							boxShadow: "2px 3px 1px #9E9E9E"
+							/*border: `2px solid black`,
+    						background: 'linear-gradient(45deg, #deedf0 30%, #dbe6fd 90%)',*/
+    					}}
 					>
 						<Form
 							name="normal_login"
@@ -123,6 +142,7 @@ class Login extends Component {
 						</Form>
 					</Card>
 				)}
+			</div>
 			</div>
 		);
 	}
